@@ -1,0 +1,9 @@
+# MOT17_FRCNN.yaml
+path: /workspace/dataset  # Root dataset path
+
+train: images/train
+val: images/train
+
+# Classes
+nc: 1  # Only "person" class in MOT17
+names: ["person"]
