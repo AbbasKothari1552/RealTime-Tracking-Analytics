@@ -4,4 +4,5 @@ inputs
 dataset
 yolov8n.pt
 outputs
-
+multi_camera_tracking/videos
+multi_camera_tracking/**/__pycache__/** 
