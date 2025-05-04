@@ -7,12 +7,27 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libxrender1 \
+    libx11-xcb1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxdamage1 \
+    libxi6 \
+    libxrandr2 \
+    libxss1 \
+    libxtst6 \
+    libxcb1 \
+    libxcb-util1 \
+    libglu1-mesa \
+    libegl1-mesa \
+    libgl1-mesa-glx \
+    x11-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python packages
 RUN pip install --no-cache-dir \
     ultralytics==8.1.27 \
     deep-sort-realtime==1.3.2 \
-    opencv-python-headless==4.8.1.78  # Headless version avoids GUI dependencies
+    opencv-python \
+    scikit-learn
 
 WORKDIR /workspace

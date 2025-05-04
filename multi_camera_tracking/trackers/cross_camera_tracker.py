@@ -32,6 +32,7 @@ class CrossCameraTracker:
             max_similarity = 0
             for obj2 in frame2_features:
                 similarity = cosine_similarity([obj1['feature']], [obj2['feature']])[0][0]
+
                 if similarity > self.similarity_threshold:
                     best_match = obj2
                     max_similarity = similarity

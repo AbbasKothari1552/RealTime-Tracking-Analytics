@@ -11,8 +11,11 @@ def main():
     trackers = [DeepSORTTracker() for _ in range(4)] # 4 deepsort instance for 4 camera/videos
     cross_camera_tracker = CrossCameraTracker()
 
+
     while True:
+
         frames = video_loader.read_frames()
+        
 
         # Individual instance for each camera/video
         # trackers = [DeepSORTTracker() for _ in range(len(frames))]
